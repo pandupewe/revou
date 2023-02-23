@@ -1,0 +1,231 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+CSS Reset End
+*/
+
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    padding: 16px 24px;
+  }
+
+  .header-wrapper > .menu {
+    display: flex;
+  }
+
+  .header-wrapper > .menu > button {
+    background-color: yellow;
+    padding: 8px 16px;
+    margin: 5px 10px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s background-color ease-out;
+  }
+
+  .header-wrapper > .menu > button:hover {
+    background-color: gainsboro;
+  }
+
+  .header-wrapper > .menu > button:first-child {
+    
+  }
+
+  .header-wrapper > .menu > button:last-child {
+    
+  }
+
+  .header-wrapper > .logo {
+    width: auto;
+    height: 40px;
+  }
+
+  .main-content {
+    padding: 24px;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70%;
+    margin: auto;
+  }
+
+  .about-us{
+
+  }
+
+  h1{
+    font-size: 30px;
+  }
+
+  .profile-wrapper{
+    max-width: 5;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .profile-section{
+    width: 100%;
+    margin: 10px;
+  }
+
+  .profile-section > h3{
+    font-size: 20px;
+    border-bottom: 2px solid black;
+  }
+  
+  .profile-section > img{
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .team-title{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  
+  .team-title > h2{
+    font-size: 40px;
+  }
+
+    
+  .team-title > h3{
+    font-size: 20px;
+  }
+
+  .team-wrapper {
+    display: flex;
+    margin: 20px;
+    align-items: left; 
+    padding: 16px 24px;
+  }
+
+  .team-image {
+    margin: 15px;
+
+  }
+
+  .team-image > img {
+    border-radius: 100px;
+  }
+
+  .team-image > h3 {
+    text-align: center;
+  }
+
+  .clear{
+    border-top: 2px solid black;
+    margin: 20px 0;
+  }
+
+  .nav-footer {
+    display: flex;
+    height: 75px;
+    align-items: center;
+    padding: 30px;
+    border-top: 2px solid black;
+  }
+  
+  .nav-footer p {
+    margin: 0 50px;
+  }
+
+
+  
+  @media only screen and (max-width: 600px) {
+    .header-wrapper {
+      flex-direction: column;
+    }
+
+    .menu {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      margin-bottom: 14px;
+    }
+
+    .header-wrapper > .menu > button {
+        width: 50%;
+      }
+      
+    .profile-wrapper {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+
+     
+    .profile-wrapper > img {
+      width: 80%;
+    }
+
+    #ganjil{
+      flex-direction: column-reverse;
+    }
+
+  }
