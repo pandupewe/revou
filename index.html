@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RevoU Mini Software Engineering Class</title>
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <img class="logo" alt="revou-logo" src="/assets/logo.svg" />
+      <div class="menu">
+        <button><a href="#">Home</a></button>
+        <button><a href="/profile.html">My Profile</a></button>
+        <button><a href="#">Portfolio</a></button>
+        <button><a href="#">Message Us</a></button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <h1>Welcome to <span id="nama">@pandupewe</span>, enjoy!</h1>
+
+      <!-- <script>
+        var name = prompt("Masukan nama kamu");
+        document.getElementById("nama").innerText = name;
+      </script> -->
+
+      <div class="slide-wrapper">
+        <img
+          class="img-slideshow"
+          src="https://source.unsplash.com/random/1080x400?architecture&sig=1"
+        />
+        <img
+          class="img-slideshow"
+          src="https://source.unsplash.com/random/1080x400?architecture&sig=2"
+        />
+        <img
+          class="img-slideshow"
+          src="https://source.unsplash.com/random/1080x400?architecture&sig=3"
+        />
+        <button onclick="plusDivs(-1)">Previous</button>
+        <button onclick="plusDivs(1)">Next</button>
+      </div>
+      <div class="clear"></div>
+      <div>
+        <div class="headquarter">
+          <h2> Our Headquarter
+          </h2>
+          <div class="headquarter-wrapper">
+            <div class="headquarter-image">
+              <img src="https://source.unsplash.com/random/200x200?building&sig=1"/>
+              <h3> New York
+              </h3>
+            </div>
+
+            <div class="headquarter-image">
+              <img src="https://source.unsplash.com/random/200x200?building&sig=2"/>
+              <h3> Cianjur
+              </h3>
+            </div>
+
+            <div class="headquarter-image">
+              <img src="https://source.unsplash.com/random/200x200?building&sig=3"/>
+              <h3> Depok
+              </h3>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+
+      <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+          showDivs((slideIndex += n));
+        }
+
+        function showDivs(n) {
+          var i;
+          var imgList = document.getElementsByClassName("img-slideshow");
+          if (n > imgList.length) slideIndex = 1;
+          else if (n < 1) slideIndex = imgList.length;
+
+          for (i = 0; i < imgList.length; i++) {
+            imgList[i].style.display = "none";
+          }
+
+          imgList[slideIndex - 1].style.display = "block";
+        }
+
+        setInterval(() => {
+          plusDivs(1);
+        }, 1000);
+      </script>
+
+      <div class="form-section">
+        <form name="message-form" onsubmit="return validateForm()">
+          <div class="message-section">
+          Nama: <input placeholder="Nama" type="text" name="full-name" />
+          </div>
+          <br />
+          <div class="message-section">
+            Tanggal Lahir:
+            <input type="date" name="birth-date" />
+           </div>
+          <br />
+          <div class="message-section">
+            Jenis Kelamin:
+            <input type="radio" id="male" name="gender" value="Laki-laki" />
+            <label for="male">Laki-laki</label>
+            <input type="radio" id="female" name="gender" value="Perempuan" />
+            <label for="female">Perempuan</label>
+          </div>
+        <br />
+        <div>
+          Pesan:
+          <textarea placeholder="Pesan" name="messages"></textarea>
+          <br />
+        </div>
+          <input type="submit" value="Submit" />
+        </form>
+                <div class="form-output">
+          <p>Nama: <span id="sender-full-name"></span></p>
+          <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+          <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+          <p>Pesan: <span id="sender-messages"></span></p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <section class="footer">
+          <nav class="nav-footer">
+              <img src="./assets/logo.svg">
+              <p>&copy; 2023 RevoU. All rights reserved.</p>
+          </nav>
+      </section>
+  </footer>
+  <script>
+    function validateForm() {
+      var name = document.forms["message-form"]["full-name"].value;
+      var date = document.forms["message-form"]["birth-date"].value;
+      var gender = document.forms["message-form"]["gender"].value;
+      var messages = document.forms["message-form"]["messages"].value;
+
+      if (name == "" || date == "" || gender == "" || messages == "") {
+        alert("Input tidak boleh kosong");
+        return false;
+      }
+
+      document.getElementById("sender-full-name").innerText = name;
+      document.getElementById("sender-birth-date").innerText = date;
+      document.getElementById("sender-gender").innerText = gender;
+      document.getElementById("sender-messages").innerText = messages;
+      return false;
+    }
+  </script>
+  </body>
+</html>
